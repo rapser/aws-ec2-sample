@@ -1,8 +1,8 @@
-const http = require('http')
+const express = require('express')
 
-const server = http.createServer((req, res) => {
-    res.end('Hola mundo amazon web service')
-})
+const app = express()
 
-server.listen(3000)
+app.get('/', (req, res) => res.send('Hola mundo con express'))
+
+app.listen(3000)
 console.log('server on port 3000')
